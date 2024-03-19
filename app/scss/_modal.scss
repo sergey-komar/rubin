@@ -1,0 +1,120 @@
+.modal-events {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    z-index: 8;
+    display: none;
+}
+
+.modal-events__inner {
+    max-width: 62rem;
+    position: relative;
+    padding: 6rem;
+    border-radius: 15px;
+    box-shadow: 4px 12px 40px 2px rgba(12, 17, 31, 0.15);
+    background: rgb(255, 255, 255);
+}
+
+.modal-events__inner-title {
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+
+.modal-events__inner-text {
+    margin-bottom: 3rem;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(79, 79, 79);
+}
+
+.modal-events__form-input {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 0 2rem;
+    height: 5.6rem;
+    line-height: 5.6rem;
+    font-size: 16px;
+    color: rgb(79, 79, 79);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 15px;
+    background-color: #fff;
+    outline: none;
+}
+
+.modal-events__form-input::placeholder {
+    font-size: 16px;
+    color: rgb(79, 79, 79);
+}
+
+.modal-events__form-input:focus,
+.modal-events__form-textarea:focus {
+    border: 1px solid rgb(247, 206, 84);
+}
+
+.modal-events__form-textarea {
+    width: 100%;
+    margin-bottom: 3rem;
+    height: 19rem;
+    padding: 2rem;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 15px;
+    font-size: 16px;
+    color: rgb(79, 79, 79);
+    resize: none;
+    outline: none;
+}
+
+.modal-events__form-textarea::placeholder {
+    font-size: 16px;
+    color: rgb(79, 79, 79);
+}
+
+.modal-events__form-text {
+    font-size: 16px;
+    color: rgb(79, 79, 79);
+}
+
+.modal-events__form-btn {
+    margin-top: 2.5rem;
+    display: block;
+    height: 6rem;
+    width: 100%;
+    font-size: 16px;
+    line-height: 6rem;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 15px;
+    background: rgb(247, 206, 84);
+}
+
+.modal-events__form-btn:hover {
+    background: rgb(255, 153, 0);
+}
+
+.modal-events__close {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

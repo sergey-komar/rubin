@@ -1,0 +1,100 @@
+.footer {
+    padding-top: 6rem;
+    background: url('../images/footer-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-block__item {
+    width: calc(100% / 4 - 3rem);
+}
+
+.footer__item-logo {
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.footer-block__item-name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(242, 242, 242);
+}
+
+.footer-block__item-title {
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.footer-block__item-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(242, 242, 242);
+}
+
+.footer-block__item-link {
+    display: block;
+    margin-bottom: 3rem;
+    position: relative;
+    margin-left: 3rem;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(242, 242, 242);
+}
+
+.footer-block__item-text--address {
+    position: relative;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+}
+
+.footer-block__item-link--phone::before,
+.footer-block__item-link--email::before,
+.footer-block__item-text--address::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: -30px;
+    top: 3px;
+}
+
+.footer-block__item-link--phone::before {
+    background: url('../images/ic_round-phone.svg') no-repeat;
+}
+
+.footer-block__item-link--email::before {
+    background: url('../images/tabler_mail.svg') no-repeat;
+}
+
+.footer-block__item-text--address::before {
+    background: url('../images/octicon_location-16.svg') no-repeat;
+}
+
+.footer-block__item-link:hover {
+    color: rgb(247, 206, 84);
+}
+
+.footer-block__social {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer__copyright {
+    padding: 2rem 0;
+    background: rgb(0, 0, 0);
+}
+
+.footer__copyright-text {
+    font-size: 16px;
+    color: rgb(189, 189, 189);
+    line-height: 24px;
+}
