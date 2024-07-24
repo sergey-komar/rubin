@@ -10,7 +10,7 @@
 }
 
 .header-slider__box {
-    padding: 2rem 5rem 3rem 5rem;
+    padding: 2.4rem 5rem 3rem 5rem;
     background-color: #fff;
     border-radius: 0 0 5rem 5rem;
 }
@@ -18,7 +18,7 @@
 .header-slider__item-title {
     margin-bottom: 1rem;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #000;
 }
 
@@ -40,21 +40,53 @@
     position: absolute;
     z-index: 8;
     top: 40%;
+    background-color: rgb(247, 206, 84);
+}
+
+.header-slider .slick-next:hover,
+.header-slider .slick-prev:hover {
+    background-color: rgb(255, 153, 0);
 }
 
 .header-slider__item-gis {
-    display: block;
-    margin-top: -3.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 1.2rem;
+    padding-top: 1rem;
+    display: flex;
+    width: 128px;
+    height: 22px;
+    justify-content: center;
+    margin-top: -4.5rem;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
 }
 
+.header-slider__item-gis img {
+    object-fit: contain;
+}
+
+// .header-slider .slick-next {
+//     right: 2rem;
+//     background: url('../images/Arrow-right.png') no-repeat;
+// }
+
+// .header-slider .slick-prev {
+//     left: 2rem;
+//     background: url('../images/Arrow-left.png') no-repeat;
+// }
 .header-slider .slick-next {
-    left: 3rem;
-    background: url('../images/Arrow-left.png') no-repeat;
+    right: 2rem;
+    background-image: url('../images/Arrow\ 4.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .header-slider .slick-prev {
-    right: 3rem;
-    background: url('../images/Arrow-right.png') no-repeat;
+    left: 2rem;
+    background-image: url('../images/Arrow\ 3.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -62,7 +94,7 @@
 //MODAL
 .modal,
 .modal--one,
-.modal--two{
+.modal--two {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -73,8 +105,14 @@
     top: 0;
     background: rgba(0, 0, 0, .5);
     overflow: hidden;
-    z-index: 8;
+    z-index: 12;
     display: none;
+}
+
+.modal-slider--one,
+.modal-slider,
+.modal-slider--two {
+    height: 41.5rem;
 }
 
 .modal__inner-block,
@@ -82,6 +120,7 @@
 .modal__inner-block--two {
     position: relative;
     padding: 2.5rem;
+    padding-bottom: 3.2rem;
     width: 83rem;
     border-radius: 15px;
     box-shadow: 4px 12px 40px 2px rgba(12, 17, 31, 0.15);
@@ -110,7 +149,7 @@
 .modal-slider--one .slick-next,
 .modal-slider--one .slick-prev,
 .modal-slider--two .slick-next,
-.modal-slider--two .slick-prev{
+.modal-slider--two .slick-prev {
     font-size: 0;
     padding: 0;
     border: none;
@@ -120,20 +159,36 @@
     position: absolute;
     z-index: 8;
     top: 40%;
+    background-color: rgb(247, 206, 84);
 }
+
+.modal-slider .slick-next:hover,
+.modal-slider .slick-prev:hover,
+.modal-slider--one .slick-next:hover,
+.modal-slider--one .slick-prev:hover,
+.modal-slider--two .slick-next:hover,
+.modal-slider--two .slick-prev:hover {
+    background-color: rgb(255, 153, 0);
+}
+
+
 
 .modal-slider .slick-next,
 .modal-slider--one .slick-next,
 .modal-slider--two .slick-next {
-    left: 1rem;
-    background: url('../images/Arrow-left.png') no-repeat;
+    right: 1rem;
+    background-image: url('../images/Arrow\ 4.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .modal-slider .slick-prev,
 .modal-slider--one .slick-prev,
 .modal-slider--two .slick-prev {
-    right: 1rem;
-    background: url('../images/Arrow-right.png') no-repeat;
+    left: 1rem;
+    background-image: url('../images/Arrow\ 3.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -198,7 +253,7 @@
 .modal__box-input,
 .modal__box-input--one,
 .modal__box-input--two {
-    padding: 0 1rem;
+    padding: 0 1rem 0 2.4rem;
     color: rgb(131, 131, 154);
     border: 1px solid rgb(131, 131, 154);
     border-radius: 15px;
@@ -215,6 +270,7 @@
     text-align: center;
     border-radius: 15px;
     background: rgb(247, 206, 84);
+    color: #000;
 }
 
 .modal__box-input::placeholder,
@@ -244,8 +300,20 @@
     cursor: pointer;
     top: 3rem;
     right: 3rem;
-    font-size: 2.9rem;
+    font-size: 3.7rem;
 }
 
-
-
+.slider__counter--one,
+.slider__counter,
+.slider__counter--two {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    height: 3rem;
+    transform: translateY(-6rem);
+    text-align: center;
+    border-radius: 25px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+}

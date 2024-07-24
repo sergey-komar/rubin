@@ -2,32 +2,117 @@ $(function () {
     $(".header-slider__inner").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        fade: true,
+       
       
       });
 
-    $(".modal-slider__inner").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-      });
+    // $(".modal-slider__inner").slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //   });
+      var $slider = $('.modal-slider__inner');
 
-      $(".modal-slider__inner--one").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-      });
+      if ($slider.length) {
+        var currentSlide;
+        var slidesCount;
+        var sliderCounter = document.createElement('div');
+        sliderCounter.classList.add('slider__counter');
+        
+        var updateSliderCounter = function(slick, currentIndex) {
+          currentSlide = slick.slickCurrentSlide() + 1;
+          slidesCount = slick.slideCount;
+          $(sliderCounter).text(currentSlide + ' из ' +slidesCount)
+        };
+      
+        $slider.on('init', function(event, slick) {
+          $slider.append(sliderCounter);
+          updateSliderCounter(slick);
+        });
+      
+        $slider.on('afterChange', function(event, slick, currentSlide) {
+          updateSliderCounter(slick, currentSlide);
+        });
+      
+        $slider.slick();
+      }
 
-      $(".modal-slider__inner--two").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-      });
+
+
+
+
+
+      // $(".modal-slider__inner--one").slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+       
+      // });
+      var $slider1 = $('.modal-slider__inner--one');
+
+      if ($slider1.length) {
+        var currentSlide1;
+        var slidesCount1;
+        var sliderCounter1 = document.createElement('div');
+        sliderCounter1.classList.add('slider__counter--one');
+        
+        var updateSliderCounter1 = function(slick1, currentIndex1) {
+          currentSlide1 = slick1.slickCurrentSlide() + 1;
+          slidesCount1 = slick1.slideCount1;
+          $(sliderCounter1).text(currentSlide1 + ' из ' +slidesCount)
+        };
+      
+        $slider1.on('init', function(event, slick1) {
+          $slider1.append(sliderCounter1);
+          updateSliderCounter1(slick1);
+        });
+      
+        $slider1.on('afterChange', function(event, slick1, currentSlide1) {
+          updateSliderCounter1(slick1, currentSlide1);
+        });
+      
+        $slider1.slick();
+      }
+
+
+
+      // $(".modal-slider__inner--two").slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1, 
+      // });
+
+      var $slider2 = $('.modal-slider__inner--two');
+      if ($slider2.length) {
+        var currentSlide2;
+        var slidesCount2;
+        var sliderCounter2 = document.createElement('div');
+        sliderCounter2.classList.add('slider__counter--two');
+        
+        var updateSliderCounter2 = function(slick2, currentIndex2) {
+          currentSlide2 = slick2.slickCurrentSlide() + 1;
+          slidesCount2 = slick2.slideCount2;
+          $(sliderCounter2).text(currentSlide2 + ' из ' +slidesCount)
+        };
+      
+        $slider2.on('init', function(event, slick2) {
+          $slider2.append(sliderCounter2);
+          updateSliderCounter2(slick2);
+        });
+      
+        $slider2.on('afterChange', function(event, slick2, currentSlide2) {
+          updateSliderCounter2(slick2, currentSlide2);
+        });
+      
+        $slider2.slick();
+      }
+
+
+
+
+
 
       $(".reviews-slider__inner").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        fade: true,
+        
         appendArrows: '.reviews-slider__arrows'
       
       });
@@ -73,6 +158,7 @@ const modalCloseBtnOne = document.querySelector('.modal__close--one');
           modalOne.classList.remove('hide');
           document.body.style.overflow = '';
           $('.modal-slider__inner--one').slick('setPosition');
+
       });
 
     modalCloseBtnOne.addEventListener('click', ()=>{
@@ -197,7 +283,7 @@ tabsShow(0);
 }
 
 //HEADER
-const header = document.querySelector('.header__inner');
+const header = document.querySelector('.header-scroll');
 if (header) {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
@@ -205,6 +291,8 @@ if (header) {
       } else {
         header.classList.remove("header-bg");
       }
+
+      
     });
   }
 
@@ -250,5 +338,38 @@ var mas2k = IMask(element2, maskOptions);
 var mask3 = IMask(element3, maskOptions);
 var mask4 = IMask(element4, maskOptions);
 var mask5 = IMask(element5, maskOptions);
+
+
+
+//MENU
+const menu = document.querySelector('.menu');
+const mobile = document.querySelector('.nav-icon');
+
+mobile.addEventListener('click', function(){
+    this.classList.toggle('nav-icon--active');
+    menu.classList.toggle('nav--active');
+
+});
+//Находим ссылки внутри мобильной навигации
+const navLinks = document.querySelectorAll('.menu__list a');
+
+//Обходим ссылки методом forEach
+navLinks.forEach(function (item) {
+  //Для каждой ссылки добавляем прослушку по событию "Клик"
+  item.addEventListener('click', function () {
+    mobile.classList.remove('nav-icon--active'); // Убираем активный класс у иконки моб. навигации
+    menu.classList.remove('nav--active'); // Убираем активный класс у блока моб. навигации
+  
+  });
+});
+
+
+
+
+
+
+
+
+
 
 })

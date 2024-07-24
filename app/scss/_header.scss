@@ -11,7 +11,18 @@
     z-index: 11;
 }
 
+.header__inner.header-bg {
+    height: 9rem;
+}
+.logo img{
+    width: 210px;
+}
+.header__inner.header-bg .header-top {
+    padding-top: 1rem;
+}
+
 .header-top {
+    padding-top: 3.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +50,7 @@
 
 .header-top__contact-link--phone {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     text-transform: uppercase;
 }
@@ -90,14 +101,15 @@
 .header-block__contact-input,
 .header-block__contact-btn {
     display: block;
-    height: 6rem;
+    height: 60px;
     width: 100%;
     font-size: 16px;
     line-height: 6rem;
 }
 
 .header-block__contact-input {
-    padding: 0 1rem;
+    padding: 0 1rem 0 2.4rem;
+
     color: rgb(131, 131, 154);
     border: 1px solid rgb(131, 131, 154);
     border-radius: 15px;
@@ -118,6 +130,7 @@
 .header-block__contact-btn {
     font-weight: 700;
     border: none;
+    color: #000;
     text-transform: uppercase;
     text-align: center;
     border-radius: 15px;
